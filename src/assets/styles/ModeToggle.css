@@ -1,0 +1,60 @@
+.mode-toggle-container {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    z-index: 20;
+    color: #fff;
+}
+
+.mode-label {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.mode-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.mode-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.mode-btn:hover {
+    border-color: #fff;
+    color: #fff;
+}
+
+.mode-btn.active {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.mode-desc {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
+    height: 1rem;
+    /* Prevent layout shift */
+}
+
+@media (max-width: 768px) {
+    .mode-toggle-container {
+        width: 100%;
+        bottom: 10px;
+    }
+}

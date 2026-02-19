@@ -1,0 +1,65 @@
+.boot-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #9bf162;
+    color: #0f0;
+    /* Classic terminal green, can be adjusted to white/grey for 'OS' feel */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10%;
+    z-index: 9999;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+}
+
+.terminal-window {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.terminal-line {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    word-break: break-word;
+    /* Prevent overflow on small screens */
+}
+
+.cursor {
+    display: inline-block;
+    color: #fff;
+    margin-left: 5px;
+}
+
+.progress-container {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 2rem;
+}
+
+.progress-bar {
+    height: 2px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: width 0.1s linear;
+}
+
+.progress-text {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .terminal-line {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,27 @@
+.micro-logs {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 150px;
+    overflow: hidden;
+}
+
+.log-line {
+    margin-bottom: 0.3rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .micro-logs {
+        display: none;
+        /* Hide on mobile to avoid clutter */
+    }
+}

@@ -1,0 +1,61 @@
+.system-identity {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 350px;
+    background: rgba(10, 10, 10, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 1.5rem;
+    font-family: 'Courier New', monospace;
+    color: #fff;
+    pointer-events: none;
+    /* Let clicks pass through to 3D scene if needed, but text selection might be desired */
+    pointer-events: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.identity-header {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.identity-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.label {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.value {
+    text-align: right;
+    font-weight: bold;
+}
+
+.identity-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .system-identity {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        margin-top: 2rem;
+        background: rgba(10, 10, 10, 0.9);
+    }
+}

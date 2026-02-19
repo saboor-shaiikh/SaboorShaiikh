@@ -1,60 +1,74 @@
 .mode-toggle-container {
     position: absolute;
-    bottom: 5%;
+    bottom: 7%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     font-family: 'Courier New', monospace;
     z-index: 20;
     color: #fff;
+    width: 100%;
+    pointer-events: none;
+    /* Let clicks pass through container */
 }
 
 .mode-label {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-bottom: 0.5rem;
     letter-spacing: 2px;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .mode-buttons {
     display: flex;
+    justify-content: center;
     gap: 1rem;
     margin-bottom: 0.5rem;
+    pointer-events: auto;
+    /* Re-enable clicks on buttons */
 }
 
 .mode-btn {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: rgba(255, 255, 255, 0.5);
-    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 0.4rem 0.8rem;
     font-family: inherit;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     transition: all 0.3s ease;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
 }
 
 .mode-btn:hover {
     border-color: #fff;
     color: #fff;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .mode-btn.active {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     border-color: #fff;
     color: #fff;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .mode-desc {
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.4);
     height: 1rem;
-    /* Prevent layout shift */
 }
 
 @media (max-width: 768px) {
     .mode-toggle-container {
-        width: 100%;
-        bottom: 10px;
+        bottom: 120px;
+        /* Clear the footer */
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .mode-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
     }
 }

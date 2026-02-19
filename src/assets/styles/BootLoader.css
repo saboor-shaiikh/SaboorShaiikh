@@ -4,14 +4,18 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #9bf162;
-    color: #0f0;
-    /* Classic terminal green, can be adjusted to white/grey for 'OS' feel */
+    background: #000000;
+    /* Red background as requested */
+    color: #ffffffbb;
+    /* White text for contrast on red */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    padding: 10%;
+    /* Center vertical */
+    align-items: center;
+    /* Center horizontal */
+    padding: 1rem;
+    /* Basic padding */
     z-index: 9999;
     font-family: 'Courier New', monospace;
     overflow: hidden;
@@ -26,7 +30,7 @@
 .terminal-line {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 253, 253, 0.9);
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
     word-break: break-word;
     /* Prevent overflow on small screens */

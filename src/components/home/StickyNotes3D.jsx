@@ -11,7 +11,7 @@ const focusThoughts = [
     "Life is Good.",
     "Stop staring at the ....., Captain.",
     "Is it hot in here or is it just the CPU?",
-    "what if .......",
+    "what if?",
     "Simplicity is the ultimate flex."
 ];
 
@@ -23,9 +23,9 @@ const hyperThoughts = [
     "What if I just... moved to the mountains?",
     "My brain has too many extensions installed.",
     "Wait, what day is it?",
-    "If I don't move, the bugs can't see me.",
+    "47 tabs open. No regrets, just pure, unadulterated adrenaline.",
     "Living life at 2x speed.",
-    "Deadline,Deadline,Deadline"
+    "Deadline,Deadline, Deadline"
 ];
 
 const StickyNoteItem = ({ text, position, mode, delay }) => {
@@ -56,7 +56,7 @@ const StickyNotes3D = ({ mode }) => {
 
     const notes = useMemo(() => {
         const thoughts = mode === 'hyper' ? hyperThoughts : focusThoughts;
-        const radius = mode === 'hyper' ? 1.4 : 1.1; // Tighter radius aligned with scaled down core
+        const radius = 1.3; // Fixed radius for stability
 
         return thoughts.map((text, i) => {
             // Golden Angle for even distribution on a sphere surface approximation

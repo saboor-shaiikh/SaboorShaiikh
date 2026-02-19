@@ -15,7 +15,10 @@
 
 @media (max-width: 768px) {
     .sticky-note-3d {
-        font-size: 0.6rem;
-        padding: 0.2rem 0.4rem;
+        font-size: 0.5rem;
+        /* Readable but small */
+        padding: 0.15rem 0.3rem;
+        background: rgba(255, 235, 59, 0.2);
+        /* Slightly more visible on mobile */
     }
 }

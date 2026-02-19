@@ -9,7 +9,6 @@ import MetricsGrid from '../components/home/MetricsGrid';
 import MicroLogs from '../components/home/MicroLogs';
 // StickyNotes removed from 2D overlay, now in 3D scene
 import ModeToggle from '../components/home/ModeToggle';
-import ThoughtStream from '../components/home/ThoughtStream';
 
 const Home = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -39,7 +38,6 @@ const Home = () => {
                     <SystemIdentity />
                     <MetricsGrid />
                     <MicroLogs />
-                    <ThoughtStream mode={mode} />
                     <ModeToggle mode={mode} setMode={setMode} />
 
                     <Footer />

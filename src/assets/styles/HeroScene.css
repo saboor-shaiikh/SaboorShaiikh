@@ -14,3 +14,29 @@ canvas {
     height: 100% !important;
     display: block;
 }
+
+.neural-heading {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(220, 220, 220, 0.8);
+    font-size: 0.65rem;
+    font-family: 'Courier New', monospace;
+    z-index: 10;
+    pointer-events: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+
+    /* Button Shape */
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    width: auto;
+    white-space: nowrap;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}

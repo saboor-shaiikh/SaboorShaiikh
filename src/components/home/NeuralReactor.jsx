@@ -18,23 +18,22 @@ const NeuralReactor = ({ mode }) => {
     });
 
     return (
-        <group scale={0.8}>
+        <group scale={1.0}> {/* Scaled back up a bit */}
             {/* Core Neural Sphere */}
             <Sphere ref={coreRef} args={[1, 64, 64]}>
                 <MeshDistortMaterial
-                    color={mode === 'hyper' ? "#ff0000" : "#ffffff"} // Reacts to mode
-                    emissive={mode === 'hyper' ? "#bd0000" : "#000000"}
-                    distort={0.4}
-                    speed={mode === 'hyper' ? 4 : 1.5}
+                    color={mode === 'hyper' ? "#ff0000" : "#b8ffc9"} // Greenish tint in focus
+                    emissive={mode === 'hyper' ? "#bd0000" : "#001a05"} // Subtle green glow
+                    distort={0.45} // Locked distortion to prevent size jump
+                    speed={mode === 'hyper' ? 10 : 2} // Intense speed in hyper
                     roughness={0.2}
                     metalness={0.8}
                     wireframe={true}
                 />
             </Sphere>
 
-            {/* Inner Glow Sphere */}
             <Sphere args={[0.8, 32, 32]}>
-                <meshBasicMaterial color="#ffffff" transparent opacity={0.1} />
+                <meshBasicMaterial color={mode === 'hyper' ? "#ff0000" : "#13d641ff"} transparent opacity={0.1} />
             </Sphere>
 
             {/* Orbiting Ring */}
